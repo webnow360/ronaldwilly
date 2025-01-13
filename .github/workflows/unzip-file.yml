@@ -17,7 +17,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: ronald-willy-artifact
-        path: path/to/ronald-willy.zip
+        path: ronald-willy.zip
 
     - name: Download the zip file
       uses: actions/download-artifact@v3
@@ -26,4 +26,4 @@ jobs:
 
     - name: Unzip file
       run: |
-        unzip "ronald willy.zip"
+        unzip "ronald-willy.zip"
