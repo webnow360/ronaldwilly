@@ -1,0 +1,23 @@
+name: Unzip File
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  unzip:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Download the zip file
+      uses: actions/download-artifact@v2
+      with:
+        name: ronald-willy-artifact
+
+    - name: Unzip file
+      run: |
+        unzip "ronald willy.zip"
