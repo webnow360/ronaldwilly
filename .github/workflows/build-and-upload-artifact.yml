@@ -1,0 +1,22 @@
+name: Build and Upload Artifact
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Build project
+      run: |
+        # Add your build commands here
+        echo "Building project..."
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: ronald-willy-artifact
+        path: path/to/ronald-willy.zip
