@@ -19,4 +19,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: ronald-willy-artifact
-        path: path/to/ronald-willy.zip
+        path: /ronald-willy.zip
