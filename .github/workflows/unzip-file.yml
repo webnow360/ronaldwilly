@@ -6,12 +6,18 @@ on:
       - main
 
 jobs:
-  unzip:
+  build:
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: ronald-willy-artifact
+        path: path/to/ronald-willy.zip
 
     - name: Download the zip file
       uses: actions/download-artifact@v3
